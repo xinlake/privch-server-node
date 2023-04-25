@@ -20,13 +20,13 @@ if [[ $sysId != "debian" && $sysId != "ubuntu" ]]; then
     exit 0
 fi
 
-ssPackageUrl="https://github.com/shadowsocks/shadowsocks-rust/releases/download/v1.15.3/shadowsocks-v1.15.3"
+ssPackageUrl="https://github.com/xinlake/privch-server/raw/main/.lfs/ss.rust-v1.15.3"
 case $sysArch in
     "i686")
-        ssPackageUrl="${ssPackageUrl}.i686-unknown-linux-musl.tar.xz"
+        ssPackageUrl="https://github.com/shadowsocks/shadowsocks-rust/releases/download/v1.15.3/shadowsocks-v1.15.3.i686-unknown-linux-musl.tar.xz"
         ;;
     "x86_64")
-        ssPackageUrl="${ssPackageUrl}.x86_64-unknown-linux-gnu.tar.xz"
+        ssPackageUrl="${ssPackageUrl}-linux-gnu-x64.tar.xz"
         ;;
     ""|*)
         echo "This script only supports x86 and x86-64 machines"
